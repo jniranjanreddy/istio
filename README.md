@@ -50,6 +50,19 @@ v Egress gateways installed
 v Ingress gateways installed
 v Installation complete    
 
+[root@k8s-helm ~]# kubectl label namespace default istio-injection=enabled
+namespace/default labeled
+
+root@dev-server01:~# k describe ns prod
+Name:         prod
+Labels:       istio-injection=enabled
+              kubernetes.io/metadata.name=prod
+Annotations:  <none>
+Status:       Active
+
+No resource quota.
+No LimitRange resource.
+
 
 [root@k8s-helm ~]# istioctl verify-install
 1 Istio control planes detected, checking --revision "default" only
@@ -134,9 +147,10 @@ deployment.apps/reviews-v3 created
 service/productpage created
 serviceaccount/bookinfo-productpage created
 deployment.apps/productpage-v1 created
-
-
 ```
 
+## Virtual Service
+Virtual Service  - https://istio.io/latest/docs/reference/config/networking/virtual-service/
+Destination Rule - https://istio.io/latest/docs/reference/config/networking/destination-rule/
 
 
