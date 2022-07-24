@@ -1,4 +1,11 @@
 ## What is Istio
+Notes: to simulate as domain
+```
+curl -H "Host:deepdive.com" http://54.255.29.214:31797    # <Node Pord>
+```
+
+
+
 ```
 Istio is a service mesh.
 
