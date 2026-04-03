@@ -160,4 +160,35 @@ deployment.apps/productpage-v1 created
 Virtual Service  - https://istio.io/latest/docs/reference/config/networking/virtual-service/
 Destination Rule - https://istio.io/latest/docs/reference/config/networking/destination-rule/
 
+## 3. Classic demo: Bookinfo
+```
+curl -L https://istio.io/downloadIstio | sh -
+cd istio-* 
+export PATH=$PWD/bin:$PATH
+istioctl install --set values.pilot.env.PILOT_ENABLE_STATUS=true -y
+kubectl label namespace default istio-injection=enabled --overwrite
 
+kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+
+
+minikube tunnel   # often needed for LoadBalancer in another terminal
+# or
+minikube service list
+istioctl analyze
+
+
+podman pull docker.io/istio/examples-bookinfo-productpage-v1:1.20.2
+podman pull docker.io/istio/examples-bookinfo-ratings-v1:1.20.2
+podman pull docker.io/istio/examples-bookinfo-reviews-v1:1.20.2
+podman pull docker.io/istio/examples-bookinfo-reviews-v2:1.20.2
+podman pull docker.io/istio/examples-bookinfo-reviews-v3:1.20.2
+
+
+minikube image load docker.io/istio/examples-bookinfo-productpage-v1:1.20.2
+
+minikube image load docker.io/istio/examples-bookinfo-reviews-v1:1.20.2
+minikube image load docker.io/istio/examples-bookinfo-reviews-v2:1.20.2
+minikube image load docker.io/istio/examples-bookinfo-reviews-v3:1.20.2
+
+```
