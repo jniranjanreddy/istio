@@ -1,7 +1,8 @@
 ## What is Istio
 Notes: to simulate as domain
+## Bookinfo - https://istio.io/latest/docs/examples/bookinfo/
 ```
-curl -H "Host:deepdive.com" http://54.255.29.214:31797    # <Node Pord>
+curl -H "Host:deepdive.com" http://x.x.x.x:31797    # <Node Pord>
 ```
 
 
