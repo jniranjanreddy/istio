@@ -189,7 +189,13 @@ podman pull docker.io/istio/examples-bookinfo-reviews-v3:1.20.2
 minikube image load docker.io/istio/examples-bookinfo-productpage-v1:1.20.2
 
 minikube image load docker.io/istio/examples-bookinfo-reviews-v1:1.20.2
+
+
+
 minikube image load docker.io/istio/examples-bookinfo-reviews-v2:1.20.2
 minikube image load docker.io/istio/examples-bookinfo-reviews-v3:1.20.2
 
 ```
+<img width="1230" height="671" alt="image" src="https://github.com/user-attachments/assets/20b46187-3e35-4284-b9da-735f3364f381" />
+
+
