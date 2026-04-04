@@ -195,7 +195,35 @@ minikube image load docker.io/istio/examples-bookinfo-reviews-v1:1.20.2
 minikube image load docker.io/istio/examples-bookinfo-reviews-v2:1.20.2
 minikube image load docker.io/istio/examples-bookinfo-reviews-v3:1.20.2
 
+## Remove Istio
+```
+ istioctl manifest generate --set profile=demo | kubectl delete -f -
+customresourcedefinition.apiextensions.k8s.io "authorizationpolicies.security.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "destinationrules.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "envoyfilters.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "gateways.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "peerauthentications.security.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "proxyconfigs.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "requestauthentications.security.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "serviceentries.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "sidecars.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "telemetries.telemetry.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "virtualservices.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "wasmplugins.extensions.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "workloadentries.networking.istio.io" deleted
+customresourcedefinition.apiextensions.k8s.io "workloadgroups.networking.istio.io" deleted
+serviceaccount "istio-egressgateway-service-account" deleted from istio-system namespace
+serviceaccount "istio-ingressgateway-service-account" deleted from istio-system namespace
+serviceaccount "istio-reader-service-account" deleted from istio-system namespace
+```
+
 ```
 <img width="1230" height="671" alt="image" src="https://github.com/user-attachments/assets/20b46187-3e35-4284-b9da-735f3364f381" />
+
+<img width="1099" height="628" alt="image" src="https://github.com/user-attachments/assets/a228c1f7-dbd6-4495-aed5-b854a5cb3256" />
+
+## Profiles
+<img width="1057" height="504" alt="image" src="https://github.com/user-attachments/assets/7625e57f-6e34-437e-bb87-65adae76d7ff" />
+
 
 
