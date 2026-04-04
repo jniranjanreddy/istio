@@ -225,5 +225,12 @@ serviceaccount "istio-reader-service-account" deleted from istio-system namespac
 ## Profiles
 <img width="1057" height="504" alt="image" src="https://github.com/user-attachments/assets/7625e57f-6e34-437e-bb87-65adae76d7ff" />
 
+## Labelling, after labeling, if any pod created, it will inject a envoy container.
+##  kubectl label namespace kube-system istio-injection=enabled
+<img width="1279" height="737" alt="image" src="https://github.com/user-attachments/assets/c64d31c3-2923-4cae-985b-e209becb49b2" />
+
+## Traffic Management
+
+<img width="949" height="595" alt="image" src="https://github.com/user-attachments/assets/aae1a65e-6597-4e9a-94a4-39d1555bce66" />
 
 
