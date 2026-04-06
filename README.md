@@ -233,4 +233,9 @@ serviceaccount "istio-reader-service-account" deleted from istio-system namespac
 
 <img width="949" height="595" alt="image" src="https://github.com/user-attachments/assets/aae1a65e-6597-4e9a-94a4-39d1555bce66" />
 
+## Gateways
+<img width="593" height="305" alt="image" src="https://github.com/user-attachments/assets/be70a9d2-2fce-45ba-bab1-c57f96c5f8e6" />
+
+# Service Entry
+<img width="587" height="321" alt="image" src="https://github.com/user-attachments/assets/f31cf6ef-8fc7-4b7a-b43b-3b954fbedac0" />
 
